@@ -1,5 +1,5 @@
 # alura-boas-praticas-em-java
-Esse repositório é destinado ao curso do alura sobre refatoração e boas práticas de um código.
+Esse repositório é destinado ao curso do alura sobre refatoração e boas práticas de um código. <br>
 Concluído em: 25/10/2023.
 
 ## Detalhes
