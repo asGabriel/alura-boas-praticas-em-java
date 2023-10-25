@@ -56,15 +56,23 @@ public class AbrigoService {
             Abrigo[] abrigos = new ObjectMapper().readValue(responseBody, Abrigo[].class);
             List<Abrigo> abrigoList = Arrays.stream(abrigos).toList();
 
-            System.out.println("Abrigos cadastrados:");
-            for (Abrigo abrigo : abrigoList) {
-                long id = abrigo.getId();
-                String nome = abrigo.getNome();
-                System.out.println(id + " - " + nome);
+            if(abrigoList.isEmpty()) {
+                System.out.println("Não há abrigos cadastrados");
+            } else {
+                mostrarAbrigos(abrigoList);
             }
 
         } catch (Exception e) {
             System.out.println(e.toString());
+        }
+    }
+
+    private void mostrarAbrigos(List<Abrigo> abrigoList) {
+        System.out.println("Abrigos cadastrados:");
+        for (Abrigo abrigo : abrigoList) {
+            long id = abrigo.getId();
+            String nome = abrigo.getNome();
+            System.out.println(id + " - " + nome);
         }
     }
 }
